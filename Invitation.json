@@ -1,0 +1,37 @@
+{
+  "name": "Invitation",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email of the invited tenant"
+    },
+    "property_id": {
+      "type": "string",
+      "description": "ID of the property"
+    },
+    "lease_id": {
+      "type": "string",
+      "description": "ID of the lease"
+    },
+    "token": {
+      "type": "string",
+      "description": "Unique invitation token"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "expired"
+      ],
+      "default": "pending",
+      "description": "Invitation status"
+    }
+  },
+  "required": [
+    "email",
+    "property_id"
+  ]
+}
