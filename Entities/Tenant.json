@@ -1,0 +1,50 @@
+{
+  "name": "Tenant",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email del inquilino"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Nombre completo"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Tel\u00e9fono de contacto"
+    },
+    "property_id": {
+      "type": "string",
+      "description": "ID de la propiedad asignada"
+    },
+    "invitation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted"
+      ],
+      "default": "pending",
+      "description": "Estado de la invitaci\u00f3n"
+    },
+    "move_in_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de entrada"
+    },
+    "emergency_contact_name": {
+      "type": "string",
+      "description": "Nombre del contacto de emergencia"
+    },
+    "emergency_contact_phone": {
+      "type": "string",
+      "description": "Tel\u00e9fono del contacto de emergencia"
+    }
+  },
+  "required": [
+    "email",
+    "full_name",
+    "property_id"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Lease",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "ID de la propiedad"
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "ID del inquilino"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de inicio del contrato"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de fin del contrato"
+    },
+    "monthly_rent": {
+      "type": "number",
+      "description": "Renta mensual acordada"
+    },
+    "deposit": {
+      "type": "number",
+      "description": "Dep\u00f3sito de seguridad"
+    },
+    "payment_day": {
+      "type": "number",
+      "description": "D\u00eda del mes para el pago (1-31)",
+      "minimum": 1,
+      "maximum": 31
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "expired",
+        "terminated"
+      ],
+      "default": "active",
+      "description": "Estado del contrato"
+    },
+    "terms": {
+      "type": "string",
+      "description": "T\u00e9rminos y condiciones adicionales"
+    }
+  },
+  "required": [
+    "property_id",
+    "tenant_id",
+    "start_date",
+    "monthly_rent",
+    "payment_day"
+  ]
+}

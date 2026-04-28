@@ -1,0 +1,35 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "lease_id": {
+      "type": "string",
+      "description": "ID del contrato"
+    },
+    "property_id": {
+      "type": "string",
+      "description": "ID de la propiedad"
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "ID del inquilino"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Monto del pago"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha del pago"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "ach",
+        "credit_card",
+        "cash",
+        "transfer",
+        "other"
+      ],
+ 

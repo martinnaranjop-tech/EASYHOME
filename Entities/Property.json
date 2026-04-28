@@ -1,0 +1,66 @@
+{
+  "name": "Property",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre de la propiedad"
+    },
+    "address": {
+      "type": "string",
+      "description": "Direcci\u00f3n completa"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "apartment",
+        "house",
+        "condo",
+        "other"
+      ],
+      "description": "Tipo de propiedad"
+    },
+    "bedrooms": {
+      "type": "number",
+      "description": "N\u00famero de habitaciones"
+    },
+    "bathrooms": {
+      "type": "number",
+      "description": "N\u00famero de ba\u00f1os"
+    },
+    "square_meters": {
+      "type": "number",
+      "description": "Metros cuadrados"
+    },
+    "monthly_rent": {
+      "type": "number",
+      "description": "Renta mensual"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "occupied",
+        "maintenance"
+      ],
+      "default": "available",
+      "description": "Estado de la propiedad"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs de fotos de la propiedad"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    }
+  },
+  "required": [
+    "name",
+    "address",
+    "monthly_rent"
+  ]
+}

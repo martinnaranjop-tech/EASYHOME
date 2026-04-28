@@ -1,0 +1,87 @@
+{
+  "name": "MaintenanceRequest",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "ID de la propiedad"
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "ID del inquilino que reporta"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "plumbing",
+        "electrical",
+        "appliances",
+        "hvac",
+        "structural",
+        "pest_control",
+        "other"
+      ],
+      "description": "Categor\u00eda del problema"
+    },
+    "urgency": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "emergency"
+      ],
+      "default": "medium",
+      "description": "Nivel de urgencia"
+    },
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo breve del problema"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n detallada"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs de fotos/videos del problema"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "seen",
+        "in_progress",
+        "resolved",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Estado del ticket"
+    },
+    "seen_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Cu\u00e1ndo el manager marc\u00f3 como visto"
+    },
+    "resolved_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Cu\u00e1ndo se resolvi\u00f3"
+    },
+    "resolution_notes": {
+      "type": "string",
+      "description": "Notas de la resoluci\u00f3n"
+    }
+  },
+  "required": [
+    "property_id",
+    "tenant_id",
+    "category",
+    "urgency",
+    "title",
+    "description"
+  ]
+}

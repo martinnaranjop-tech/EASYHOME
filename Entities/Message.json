@@ -1,0 +1,35 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "maintenance_request_id": {
+      "type": "string",
+      "description": "ID del ticket de mantenimiento"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email del remitente"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Nombre del remitente"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenido del mensaje"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs de archivos adjuntos"
+    }
+  },
+  "required": [
+    "maintenance_request_id",
+    "sender_email",
+    "sender_name",
+    "content"
+  ]
+}
